@@ -11,11 +11,12 @@
 import express from "express";
 import type { Application, Request, Response } from "express";
 import cors from "cors";
+import dotenv from "dotenv"
 import chatRoutes from "./routes/chat.routes.ts";
 import authRoutes from "./routes/auth.routes.ts";
 import vapiRoutes from "./routes/vapi.routes.ts";
 import errorHandler from "./middleware/error-handler.middleware.ts";
-
+dotenv.config()
 const app: Application = express();
 
 // Middleware
